@@ -4,7 +4,7 @@ NAMESPACE="monitoring"
 ACQUIRING_JPTS_AND_NUS_PODS=$(kubectl get pods --namespace $NAMESPACE -o custom-columns=:metadata.name)
 # | grep -E 'jpos-acquiring-nus|jpos-acquiring-jpts'
 #)
-echo "The following pods in the acquiring namespace will be restarted:"
+echo "The following pods in the monitoring namespace will be restarted:"
 for pod in $ACQUIRING_JPTS_AND_NUS_PODS; do
   echo "Restarting pod: $ACQUIRING_JPTS_AND_NUS_PODS"
   
