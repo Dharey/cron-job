@@ -15,11 +15,11 @@ pipeline {
 		// 	when {
 		// 		branch 'qa'
 		// 	}
-			stages {
+			// stages {
 				stage('Execute restart pod script') {
-          agent {
-						any
-					}
+     //      agent {
+					// 	any
+					// }
 					steps {
 					  // sh 'sudo su -' // Switch to root user
 						sh 'pwd' // Print present working directory
