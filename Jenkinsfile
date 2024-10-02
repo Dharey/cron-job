@@ -2,7 +2,7 @@ pipeline {
   agent any
 	// trigger restart at 6:00 AM and 6:00 PM - Africa/Lagos Timezone
 	triggers {
-    cron('TZ=Africa/Lagos \n * * * * *') 
+    cron('TZ=Africa/Lagos \n */15 * * * *') 
 	}
   // options {
 		// skipStagesAfterUnstable()
