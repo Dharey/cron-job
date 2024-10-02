@@ -18,7 +18,7 @@ pipeline {
 			// stages {
 				stage('Execute restart pod script') {
           steps {
-                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8scred', namespace: 'monitoring', restrictKubeConfigAccess: false, serverUrl: '') {
+                withKubeConfig([credentialsId: 'k8scred']) {
                 script {
 					// steps {
 					  // sh 'sudo su -' // Switch to root user
