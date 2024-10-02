@@ -4,12 +4,12 @@ pipeline {
 	triggers {
     cron('TZ=Africa/Lagos \n "* * * * *"') 
 	}
-  options {
-		skipStagesAfterUnstable()
-		disableConcurrentBuilds()
-		ansiColor('xterm')
-		parallelsAlwaysFailFast()
-  }
+  // options {
+		// skipStagesAfterUnstable()
+		// disableConcurrentBuilds()
+		// ansiColor('xterm')
+		// parallelsAlwaysFailFast()
+  // }
   stages {
 		// stage('QA') {
 		// 	when {
