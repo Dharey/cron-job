@@ -4,12 +4,7 @@ pipeline {
 	triggers {
     cron('TZ=Africa/Lagos \n */15 * * * *') 
 	}
-  // options {
-		// skipStagesAfterUnstable()
-		// disableConcurrentBuilds()
-		// ansiColor('xterm')
-		// parallelsAlwaysFailFast()
-  // }
+
   stages {
         stage("Install kubectl"){
             steps {
@@ -20,11 +15,7 @@ pipeline {
                 """
             }
         }
-		// stage('QA') {
-		// 	when {
-		// 		branch 'qa'
-		// 	}
-			// stages {
+
 	stage('Execute restart pod script') {
           steps {
                 withKubeConfig([credentialsId: 'k8scred']) {

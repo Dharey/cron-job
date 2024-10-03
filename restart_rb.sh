@@ -1,4 +1,7 @@
 # #!/bin/bash
+# The first argument is the kubectl path
+KUBECTL=$1
+
 # Get all deployments in the acquiring namespace
 NAMESPACE="monitoring"
 ACQUIRING_JPTS_AND_NUS_PODS=$(kubectl get pods --namespace $NAMESPACE -o custom-columns=:metadata.name)
